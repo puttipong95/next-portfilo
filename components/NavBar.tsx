@@ -20,19 +20,19 @@ const NavBar = () => {
       <div className="text-3xl font-bold">Puttipong Seangpor</div>
       <ul className="flex gap-4 text-xl">
         <li>
-          <Link href="#home">Home</Link>
+          <Link href="#home" className="underline underline-offset-6">Home</Link>
         </li>
         <li>
-          <Link href="#about">About</Link>
+          <Link href="#about"  className="underline underline-offset-6">About</Link>
         </li>
         <li>
-          <Link href="#projects">Projects</Link>
+          <Link href="#projects"  className="underline underline-offset-6">Projects</Link>
         </li>
         <li>
-          <Link href="#experience">Experience</Link>
+          <Link href="#experience"  className="underline underline-offset-6">Experience</Link>
         </li>
         <li>
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact"  className="underline underline-offset-6">Contact</Link>
         </li>
       </ul>
       <div className="">

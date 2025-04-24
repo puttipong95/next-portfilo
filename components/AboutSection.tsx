@@ -17,12 +17,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import { Card } from "./ui/card";
 
 const AboutSection = () => {
   return (
     <div id="about">
-      <div className="grid grid-cols-2">
-        <div className="about-content space-y-6 p-6">
+      <div className="grid grid-cols-2 px-[100px] gap-6">
+        <div className="about-content space-y-6">
           <Button
             variant={"outline"}
             className="font-bold text-muted-foreground"
@@ -134,7 +135,15 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="about-img">
-          <Image src={About} width={500} height={100} alt="About" />
+          <Card className="p-0 overflow-hidden h-full w-fit min-h-[500px]">
+            <Image
+              className="w-full h-full max-w-[400px] object-cover"
+              src={About}
+              width={400}
+              height={700}
+              alt="About"
+            />
+          </Card>
         </div>
       </div>
     </div>

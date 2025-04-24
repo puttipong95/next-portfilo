@@ -5,12 +5,18 @@ import { Button } from "./ui/button";
 import { GithubIcon, GitlabIcon, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { FaLine } from "react-icons/fa6";
+import { FaRegFilePdf } from "react-icons/fa6";
+import { CiStar } from "react-icons/ci";
+import {
+  Card,
+  CardHeader,
+} from "@/components/ui/card";
 
 const HomeSection = () => {
   return (
     <div id="home" className="">
-      <div className="grid grid-cols-2">
-        <div className="home-content space-y-6 p-6">
+      <div className="grid grid-cols-2 p-6 gap-6">
+        <div className="home-content space-y-6">
           <h1 className="text-2xl">Welcome to my Portfolio!</h1>
           <p>
             I am a front-end developer with 3 years of proven experience in the
@@ -23,11 +29,16 @@ const HomeSection = () => {
             high-scale application development.
           </p>
           <div className="flex gap-2">
-            <Button className="text-2xl p-6">
-              <Link href={""}>Hire me</Link>
+            <Button className="text-2xl p-6 hover:bg-secondary-foreground">
+              <Link href={"#contact"} className="flex gap-2 items-center">
+                <CiStar />
+                Hire me
+              </Link>
             </Button>
-            <Button className="text-2xl p-6">
-              <Link href={""}>My Resume</Link>
+            <Button className="text-2xl p-6 hover:bg-secondary-foreground">
+              <Link href={""} className="flex gap-2 items-center">
+                <FaRegFilePdf /> My Resume
+              </Link>
             </Button>
           </div>
           <div className="flex items-center gap-2 text-2xl">
@@ -47,7 +58,15 @@ const HomeSection = () => {
           </div>
         </div>
         <div className="home-img">
-          <Image src={profile} width={500} height={100} alt="Profile" />
+          <Card className="p-0 overflow-hidden">
+            <Image
+              className="w-full h-full max-h-[300px] object-cover"
+              src={profile}
+              width={500}
+              height={300}
+              alt="Profile"
+            />
+          </Card>
         </div>
       </div>
     </div>
