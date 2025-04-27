@@ -81,6 +81,7 @@ const ProjectCard = ({
                   width={400}
                   height={200}
                   alt={title}
+                  placeholder="blur"
                 />
               </div>
             ))}

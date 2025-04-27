@@ -72,6 +72,7 @@ const MainProjectsSection = () => {
         width={500}
         height={400}
         alt="Project"
+        placeholder="blur"
       />
       <p className="text-xl">
         Online Interview Assessment System for Students and Professionals

@@ -54,6 +54,7 @@ const HomeSection = () => {
                     width={400}
                     height={600}
                     alt="Puttipong Resume"
+                    placeholder="blur"
                   />
                 </TooltipContent>
               </Tooltip>
@@ -83,6 +84,8 @@ const HomeSection = () => {
               width={500}
               height={300}
               alt="Profile"
+              placeholder="blur"
+              priority
             />
           </Card>
         </div>

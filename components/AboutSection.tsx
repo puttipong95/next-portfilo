@@ -142,6 +142,7 @@ const AboutSection = () => {
               width={400}
               height={700}
               alt="About"
+              placeholder="blur"
             />
           </Card>
         </div>
