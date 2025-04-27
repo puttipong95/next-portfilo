@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -24,10 +24,11 @@ export default function Home() {
         <ProjectsSection />
         <ContactSection />
         <Button
+          key={1}
           onClick={handleScroll}
           className="fixed flex flex-col items-center bottom-6 right-6 bg-primary hover:bg-secondary hover:text-primary cursor-pointer text-white p-5 rounded-full shadow-lg"
         >
-            <ChevronUp />
+          <ChevronUp />
         </Button>
       </div>
     </>
