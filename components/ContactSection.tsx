@@ -7,17 +7,17 @@ const ContactSection = () => {
   return (
     <div
       id="contact"
-      className="text-center space-y-1 flex flex-col justify-center items-center"
+      className="text-center space-y-1 flex flex-col justify-center items-center px-6"
     >
       <h1 className="text-4xl pb-4 font-bold">Let's Connect</h1>
-      <div className="flex gap-3">
-        <div className="phone flex gap-2 items-center pb-1 border-r-1 pr-3">
+      <div className="flex flex-wrap justify-center gap-3">
+        <div className="phone flex gap-2 items-center pb-1 md:border-r-1 pr-3">
           <Button className="p-5 rounded-full" variant={"outline"}>
             <Phone />
           </Button>
           <h1 className="text-2xl">095-5456-916</h1>
         </div>
-        <div className="line flex gap-2 items-center pb-1 border-r-1 pr-3">
+        <div className="line flex gap-2 items-center pb-1 md:border-r-1 pr-3">
           <Button className="p-5 rounded-full bg-green-500 hover:bg-green-600 text-white">
             <FaLine />
           </Button>
@@ -27,7 +27,7 @@ const ContactSection = () => {
           <Button className="p-5 rounded-full bg-red-500 hover:bg-red-600 text-white">
             <Mail />
           </Button>
-          <h1 className="text-2xl">puttipongseangpor@gmail.com</h1>
+          <h1 className="text-xl md:text-2xl">puttipongseangpor@gmail.com</h1>
         </div>
       </div>
     </div>

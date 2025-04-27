@@ -58,7 +58,7 @@ const ExperienceSection = () => {
   ]);
 
   return (
-    <div id="experience" className="space-y-6 flex flex-col items-center">
+    <div id="experience" className="space-y-6 flex flex-col items-center px-6">
       <Button variant={"outline"} className="font-bold text-muted-foreground">
         Experience
       </Button>

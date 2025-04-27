@@ -11,14 +11,41 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = () => {
   const { setTheme } = useTheme();
 
   return (
-    <div className="flex justify-between p-6 bg-gradient-to-b from-primary via-secondary to-primary-500">
-      <div className="text-3xl font-bold">Puttipong Seangpor</div>
-      <ul className="flex gap-4 text-xl">
+    <div className="flex flex-col md:flex-row justify-between p-6 bg-gradient-to-b from-primary via-secondary to-primary-500">
+      <div className="text-3xl font-bold flex justify-between">
+        <p>Puttipong Seangpor</p>
+        <div className="block md:hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <GiHamburgerMenu />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <Link href="#home">Home</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="#about">About</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="#projects">Projects</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="#experience">Experience</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="#contact">Contact</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </div>
+      <ul className="hidden md:flex  gap-4 text-xl">
         <li>
           <Link
             href="#home"
@@ -60,7 +87,7 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
-      <div className="">
+      <div className="hidden md:flex">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" size="icon">

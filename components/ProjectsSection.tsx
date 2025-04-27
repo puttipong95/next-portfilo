@@ -74,7 +74,7 @@ const ProjectsSection = () => {
   return (
     <div
       id="projects"
-      className="flex flex-col justify-center items-center space-y-4 max"
+      className="flex flex-col justify-center items-center space-y-4 max px-6"
     >
       <Button variant={"outline"} className="font-bold text-muted-foreground">
         Projects

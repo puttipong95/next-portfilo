@@ -7,21 +7,19 @@ import Link from "next/link";
 import { FaLine } from "react-icons/fa6";
 import { FaRegFilePdf } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
-import {
-  Card,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import Resume from '@/public/resume.png'
+import Resume from "@/public/resume.png";
 
 const HomeSection = () => {
   return (
     <div id="home" className="">
-      <div className="grid grid-cols-2 p-6 gap-6">
+      <div className="grid md:grid-cols-2 p-6 gap-6">
         <div className="home-content space-y-6">
           <h1 className="text-2xl">Welcome to my Portfolio!</h1>
           <p>
@@ -51,7 +49,12 @@ const HomeSection = () => {
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <Image src={Resume} width={400} height={600} alt="Puttipong Resume" />
+                  <Image
+                    src={Resume}
+                    width={400}
+                    height={600}
+                    alt="Puttipong Resume"
+                  />
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -72,7 +75,7 @@ const HomeSection = () => {
             </Link>
           </div>
         </div>
-        <div className="home-img">
+        <div className="order-first md:order-last home-img">
           <Card className="p-0 overflow-hidden">
             <Image
               className="w-full h-full max-h-[300px] object-cover"

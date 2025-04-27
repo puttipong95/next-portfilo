@@ -61,7 +61,7 @@ const MainProjectsSection = () => {
   return (
     <div
       id="main-projects"
-      className="flex flex-col justify-center items-center space-y-4"
+      className="flex flex-col justify-center items-center space-y-4 px-6"
     >
       <Button variant={"outline"} className="font-bold text-muted-foreground">
         Main Projects
@@ -76,9 +76,9 @@ const MainProjectsSection = () => {
       <p className="text-xl">
         Online Interview Assessment System for Students and Professionals
       </p>
-      <div className="stack flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center space-y-2">
         <h1 className="font-bold">Tech Stack Used</h1>
-        <div className="flex gap-2">
+        <div className="flex flex-row flex-wrap gap-2">
           {dataStack.map((stack) => (
             <Button key={stack.id}>{stack.name}</Button>
           ))}
