@@ -20,19 +20,44 @@ const NavBar = () => {
       <div className="text-3xl font-bold">Puttipong Seangpor</div>
       <ul className="flex gap-4 text-xl">
         <li>
-          <Link href="#home" className="underline underline-offset-6">Home</Link>
+          <Link
+            href="#home"
+            className="underline underline-offset-6 hover:text-primary"
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="#about"  className="underline underline-offset-6">About</Link>
+          <Link
+            href="#about"
+            className="underline underline-offset-6 hover:text-primary"
+          >
+            About
+          </Link>
         </li>
         <li>
-          <Link href="#projects"  className="underline underline-offset-6">Projects</Link>
+          <Link
+            href="#projects"
+            className="underline underline-offset-6 hover:text-primary"
+          >
+            Projects
+          </Link>
         </li>
         <li>
-          <Link href="#experience"  className="underline underline-offset-6">Experience</Link>
+          <Link
+            href="#experience"
+            className="underline underline-offset-6 hover:text-primary"
+          >
+            Experience
+          </Link>
         </li>
         <li>
-          <Link href="#contact"  className="underline underline-offset-6">Contact</Link>
+          <Link
+            href="#contact"
+            className="underline underline-offset-6 hover:text-primary"
+          >
+            Contact
+          </Link>
         </li>
       </ul>
       <div className="">

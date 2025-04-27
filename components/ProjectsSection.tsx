@@ -11,7 +11,7 @@ import ProjectCard from "./ProjectCard";
 
 interface project {
   id: number;
-  img: any;
+  img: any[];
   title: string;
   content: string;
   stack: string;
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
               behaviour, smooth touch UI with API Integration. With Admin and
               Petitioner Panel, along with new features such as Login in with QR
               Code, Signing In, Setting Global Threshold.`,
-      img: Project1,
+      img: [Project1, Project5, Project3],
       stack: "React.js Tailwind CSS Node.js Express MongoDB",
       visit: "",
       git: "",
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
       id: 2,
       title: "The Kolorado Paints",
       content: `A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project is for Artistic Content.`,
-      img: Project2,
+      img: [Project2],
       stack: `Next.js CSS3 React.js MUI SEO`,
       visit: "",
       git: "",
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       id: 3,
       title: "TechnoKraft",
       content: `A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project is for Educational Content Provider`,
-      img: Project3,
+      img: [Project3, Project2],
       stack: `Next.js CSS3 React.js MUI SEO`,
       visit: "",
       git: "",
@@ -55,7 +55,7 @@ const ProjectsSection = () => {
       id: 4,
       title: "BEST GST Course",
       content: `A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project also contains Payment Gateway Integration using Easebuzz. This is a GST Course Selling website.`,
-      img: Project4,
+      img: [Project4, Project1],
       stack: "Payment Gateway Next.js Tailwind CSS",
       visit: "",
       git: "",
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
       id: 5,
       title: "Affinix Digital",
       content: `A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project is for Best Digital Marketing Agency`,
-      img: Project5,
+      img: [Project5],
       stack: "Next.js Tailwind CSS React.js MUI SEO",
       visit: "",
       git: "",
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
       </Button>
       <h1 className="text-2xl"></h1>
       <div className="line w-[100px] h-0.5 bg-primary"></div>
-      <div className="project-content max-w-[800px] grid grid-cols-2 gap-4">
+      <div className="project-content max-w-[800px] grid grid-cols-1 gap-4">
         {data.map((dt) => (
           <ProjectCard
             key={dt.id}

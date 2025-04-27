@@ -9,8 +9,14 @@ import { FaRegFilePdf } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 import {
   Card,
-  CardHeader,
 } from "@/components/ui/card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
+import Resume from '@/public/resume.png'
 
 const HomeSection = () => {
   return (
@@ -29,17 +35,26 @@ const HomeSection = () => {
             high-scale application development.
           </p>
           <div className="flex gap-2">
-            <Button className="text-2xl p-6 hover:bg-secondary-foreground">
-              <Link href={"#contact"} className="flex gap-2 items-center">
+            <Link href={"#contact"} className="flex gap-2 items-center">
+              <Button className="text-2xl p-6 hover:bg-secondary-foreground cursor-pointer">
                 <CiStar />
                 Hire me
-              </Link>
-            </Button>
-            <Button className="text-2xl p-6 hover:bg-secondary-foreground">
-              <Link href={""} className="flex gap-2 items-center">
-                <FaRegFilePdf /> My Resume
-              </Link>
-            </Button>
+              </Button>
+            </Link>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={""} className="flex gap-2 items-center">
+                    <Button className="text-2xl p-6 hover:bg-secondary-foreground cursor-pointer">
+                      <FaRegFilePdf /> My Resume
+                    </Button>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <Image src={Resume} width={400} height={600} alt="Puttipong Resume" />
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
           <div className="flex items-center gap-2 text-2xl">
             <p className="pr-2">Connect with me :</p>

@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="max-w-7xl mx-auto space-y-10">
+      <div className="max-w-7xl mx-auto space-y-12">
         <HomeSection />
         <AboutSection />
         <MainProjectsSection />
