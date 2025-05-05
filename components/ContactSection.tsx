@@ -21,7 +21,7 @@ const ContactSection = () => {
           <Button className="p-5 rounded-full bg-green-500 hover:bg-green-600 text-white">
             <FaLine />
           </Button>
-          <h1 className="text-2xl">puttipong.com</h1>
+          <h1 className="text-2xl">puttipong1955.com</h1>
         </div>
         <div className="mail flex gap-2 items-center">
           <Button className="p-5 rounded-full bg-red-500 hover:bg-red-600 text-white">

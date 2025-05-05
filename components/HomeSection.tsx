@@ -23,15 +23,13 @@ const HomeSection = () => {
         <div className="home-content space-y-6">
           <h1 className="text-2xl">Welcome to my Portfolio!</h1>
           <p>
-            I am a front-end developer with 3 years of proven experience in the
-            field. I am skilled in Search Engine Optimization, Next.js,
-            React.js, Tailwind CSS, and JavaScript. I am passionate about
-            creating interactive and beautiful user interfaces, along with the
-            required functionalities on the front end.One of my favourite
-            technologies to work with is React.js, particularly within the MERN
-            / MEVN stack. My Experties include Next.js 14✨ & React.js for
-            high-scale application development.
-          </p>
+                      Hi, I’m Golf, 29 years old. I’m passionate about learning new
+                      technologies and have always been curious about how computers work.
+                      While I was studying, I created my own blog to earn extra
+                      income—which sparked my interest in web development. Since then,
+                      I’ve been deeply engaged in building websites and continuously
+                      improving my skills as a developer.
+                    </p>
           <div className="flex gap-2">
             <Link href={"#contact"} className="flex gap-2 items-center">
               <Button className="text-2xl p-6 hover:bg-secondary-foreground cursor-pointer">
@@ -42,7 +40,11 @@ const HomeSection = () => {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link href={""} className="flex gap-2 items-center">
+                  <Link
+                    href={""}
+                    className="flex gap-2 items-center"
+                    target="_blank"
+                  >
                     <Button className="text-2xl p-6 hover:bg-secondary-foreground cursor-pointer">
                       <FaRegFilePdf /> My Resume
                     </Button>
@@ -62,18 +64,60 @@ const HomeSection = () => {
           </div>
           <div className="flex items-center gap-2 text-2xl">
             <p className="pr-2">Connect with me :</p>
-            <Link href={""}>
-              <GithubIcon />
-            </Link>
-            <Link href={""}>
-              <GitlabIcon />
-            </Link>
-            <Link href={""}>
-              <Linkedin />
-            </Link>
-            <Link href={""}>
-              <FaLine />
-            </Link>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={"https://github.com/puttipong95"} target="_blank">
+                    <GithubIcon />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={"https://gitlab.com/pgmoney1955"} target="_blank">
+                    <GitlabIcon />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>GitLab</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={"https://linkedin.com/in/thaidev-programs-0238971a3"}
+                    target="_blank"
+                  >
+                    <Linkedin />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Linkedin</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={"https://line.me/ti/p/nWxCNmIJWa"}
+                    target="_blank"
+                  >
+                    <FaLine />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Line</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
         <div className="order-first md:order-last home-img">
