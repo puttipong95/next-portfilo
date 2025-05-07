@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Check } from "lucide-react";
 import ExperienceCard from "./ExperienceCard";
+import Link from "next/link";
 
 interface experience {
   id: number;
@@ -11,6 +12,7 @@ interface experience {
   description: string;
   description2: string;
   content: content;
+  projectName: string;
 }
 
 interface content {
@@ -42,6 +44,7 @@ const ExperienceSection = () => {
           "Infrastructure & DevOps: Rancher, Docker, CI/CD",
         ],
       },
+      projectName: "Online Game Services",
     },
     {
       id: 2,
@@ -61,6 +64,7 @@ const ExperienceSection = () => {
           "Back-End: Node.js, Entity Framework, SQL Server",
         ],
       },
+      projectName: "PSP Internal Project",
     },
     {
       id: 3,
@@ -80,6 +84,7 @@ const ExperienceSection = () => {
           "Back-End: NestJS, MongoDB",
         ],
       },
+      projectName: "Online Game Services",
     },
     {
       id: 4,
@@ -93,23 +98,36 @@ const ExperienceSection = () => {
           "Collaborated with designers and back-end developers to deliver responsive and user-friendly interfaces.",
           "Provided on-site training and software usage guidance to end-users in various organizations, ensuring smooth adoption and minimal technical issues.",
         ],
-        stack: ["Front-End: Angular, Bootstrap"],
+        stack: ["Front-End: Angular, Tailwind CSS, Bootstrap"],
       },
+      projectName: "Software Development Company",
     },
     {
       id: 5,
       header: "Full Stack Programmer (Remote)",
       description: "July 1, 2019 - January 31, 2020",
-      description2: `Freelance – E-commerce Website`,
+      description2: `Freelance – E-commerce & Content-Based Websites`,
       content: {
-        overview: `Worked as a freelance developer to build and maintain an e-commerce website for a client selling denim products. The project involved full-cycle development, from initial planning to deployment and maintenance.`,
+        overview: `Worked independently as a full stack freelance developer on multiple web projects, including: 1. An e-commerce website for a denim product business 2. A series of content-based blogger websites offering free access to Japanese movies, PC games, and software downloads
+Each project involved full-cycle development, from initial planning and implementation to deployment, content management, and performance optimization.`,
         responsibilities: [
-          "Designed, developed, and deployed a fully functional e-commerce website using Laravel.",
-          "Integrated essential features such as product listings, shopping cart, and order management.",
-          "Communicated directly with the client to gather requirements, provide updates, and make revisions based on feedback.",
+          "Designed, developed, and deployed a complete e-commerce website using Laravel.",
+          "Integrated core features such as product catalog, shopping cart, and order management system.",
+          "Maintained ongoing communication with the client to deliver updates and implement revisions.",
+          "Built multiple blog-style websites: Free Japanese movie streaming, PC game download service, Software download service",
+          "Developed clean, mobile-responsive UI and SEO-optimized layouts",
+          "Implemented content categorization, embedded video players, and download links",
+          "Wrote post content, optimized images, and managed performance and analytics",
+          "Handled hosting, domain management, and site maintenance",
         ],
-        stack: ["Back-End / Full Stack: Laravel (PHP Framework)"],
+        stack: [
+          "Backend / Full Stack: Laravel (PHP Framework)",
+          "Frontend: Blade (Laravel), HTML, CSS, JavaScript",
+          "Content Management: Markdown / WordPress (if applicable)",
+          "Tools: Embedded video player, Google Analytics, SEO tools, shared hosting",
+        ],
       },
+      projectName: "Games PC Download Blog",
     },
   ]);
 
@@ -127,14 +145,16 @@ const ExperienceSection = () => {
             </div>
             <div className="line w-0.5 bg-primary h-full"></div>
           </div>
-          <ExperienceCard
-            key={exp.id}
-            content={exp.content}
-            description={exp.description}
-            description2={exp.description2}
-            header={exp.header}
-            id={exp.id}
-          />
+          <Link href={`#` + exp.projectName}>
+            <ExperienceCard
+              key={exp.id}
+              content={exp.content}
+              description={exp.description}
+              description2={exp.description2}
+              header={exp.header}
+              id={exp.id}
+            />
+          </Link>
         </div>
       ))}
     </div>
