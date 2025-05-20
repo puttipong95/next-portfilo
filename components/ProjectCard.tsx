@@ -12,8 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
-import Project3 from "@/public/project3.png";
-
+import { PhotoProvider, PhotoView } from "react-photo-view";
 interface project {
   id: number;
   projectName: string;
@@ -87,7 +86,7 @@ const ProjectCard = ({
               />
             </div>
           ) : (
-            <div ref={sliderRef} className="keen-slider">
+            <div ref={sliderRef} className="keen-slider max-h-[400px]">
               {img.map((dt, i) => (
                 <div className={`keen-slider__slide number-slide` + i}>
                   <Image
@@ -102,8 +101,7 @@ const ProjectCard = ({
               ))}
             </div>
           )}
-
-          <CardTitle className="pl-6 font-bold">{title}</CardTitle>
+          <CardTitle className="pt-2 pl-6 font-bold">{title}</CardTitle>
         </CardHeader>
         <CardContent>
           <p>{content}</p>

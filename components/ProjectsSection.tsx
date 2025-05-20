@@ -5,7 +5,18 @@ import { Button } from "./ui/button";
 import Project11 from "@/public/pro11.png";
 import Project12 from "@/public/pro12.png";
 import Project13 from "@/public/pro13.png";
+import Project14 from "@/public/pro14.png";
+import Project15 from "@/public/pro15.png";
+import Project16 from "@/public/pro16.png";
+import Project17 from "@/public/pro17.png";
 import Project21 from "@/public/pro21.png";
+import Project22 from "@/public/pro22.png";
+import Project23 from "@/public/pro23.png";
+import Project24 from "@/public/pro24.png";
+import Project25 from "@/public/pro25.png";
+import Project26 from "@/public/pro26.png";
+import Project27 from "@/public/pro27.png";
+import Project28 from "@/public/pro28.png";
 import Project31 from "@/public/pro31.png";
 import Project32 from "@/public/pro32.png";
 import Project41 from "@/public/pro41.png";
@@ -37,10 +48,18 @@ const ProjectsSection = () => {
       projectName: "Online Game Services",
       title: "Online Game Services",
       content: `Developed a customizable online game service platform for B2B clients. The platform integrates third-party game services from international providers, allowing clients to configure themes, features, and user interfaces according to their branding and requirements.`,
-      img: [Project11, Project12, Project13],
+      img: [
+        Project11,
+        Project12,
+        Project13,
+        Project14,
+        Project15,
+        Project16,
+        Project17,
+      ],
       stack:
         "Angular, Vue.js, Nest.js, Socket.io, Tailwind CSS, Rancher, CICD, Docker, MySQL, MongoDB",
-      visit: "https://akoffice1688.net/",
+      visit: "",
       git: "",
     },
     {
@@ -48,7 +67,16 @@ const ProjectsSection = () => {
       projectName: "PSP Internal Project",
       title: "PSP Internal Project",
       content: `Developed an internal web application for SCGC (a chemical and industrial manufacturing company) to assist in production planning and management. The system helps staff and planners create, track, and manage production schedules efficiently within the organization.`,
-      img: [Project21],
+      img: [
+        Project21,
+        Project22,
+        Project23,
+        Project24,
+        Project25,
+        Project26,
+        Project27,
+        Project28,
+      ],
       stack: `React.js, Tailwind CSS, Node.js, Entity Framework, SQL Server`,
       visit: "",
       git: "",
