@@ -73,7 +73,7 @@ const ProjectCard = ({
   return (
     <div id={projectName}>
       <Card className="pt-0 overflow-hidden h-full" id={String(id)}>
-        <CardHeader className="p-0">
+        <CardHeader className="p-0 transition duration-300">
           {img.length === 1 ? (
             <div>
               <Image
@@ -86,12 +86,12 @@ const ProjectCard = ({
               />
             </div>
           ) : (
-            <div ref={sliderRef} className="keen-slider max-h-[400px]">
+            <div ref={sliderRef} className="keen-slider">
               {img.map((dt, i) => (
                 <div className={`keen-slider__slide number-slide` + i}>
                   <Image
                     src={dt}
-                    className="w-full"
+                    className="w-full  max-h-[200px] md:max-h-[450px] hover:max-h-[800px] transition duration-300 ease-in-out hover:scale-105 hover:opacity-80"
                     width={400}
                     height={200}
                     alt={title}
